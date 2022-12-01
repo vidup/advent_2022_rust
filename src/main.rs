@@ -1,6 +1,6 @@
 mod levels;
 
 fn main() {
-    levels::level_1_part_1::hello_world();
-    println!("Hello, world!");
+    levels::level_1::part_1();
+    levels::level_1::part_2();
 }
