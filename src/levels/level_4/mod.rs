@@ -16,6 +16,7 @@ pub fn process() {
             }
         }).collect();
 
+    println!("\nLevel 4: ");
     part_1(&assignments);
     part_2(&assignments);
 }
@@ -48,7 +49,7 @@ fn part_1(assignments: &Vec<SectionAssignment>) {
         }
     }
 
-    println!("Level 1: ");
+    println!("Part 1");
     println!("Overlaps: {}", overlaps);
 }
 
@@ -68,6 +69,6 @@ fn part_2(assignments: &Vec<SectionAssignment>) {
         }
     }
     
-    println!("Level 2: ");
+    println!("Part 2");
     println!("Overlaps: {}", overlaps);
 }

@@ -2,6 +2,7 @@ pub fn process() {
     let file_content = read_file();
     let rucksacks: Vec<&str> = file_content.lines().collect();
 
+    println!("\nLevel 3: ");
     part_1(&rucksacks);
     part_2(&rucksacks);
 }
@@ -35,7 +36,7 @@ pub fn part_1(rucksacks: &Vec<&str>) {
         }
     }
 
-    println!("Level 1 bis: ");
+    println!("Part 1");
     println!("Priority sum for common item between containers: {}", sum_of_priorities_of_common_items);
 }
 
@@ -50,6 +51,6 @@ pub fn part_2(rucksacks: &Vec<&str>) {
         }
     }
 
-    println!("Level 2 bis: ");
+    println!("Part 2");
     println!("Priority sum for common item between rucksack groups: {}", sum_of_priorities_of_rucksack_groups_common_items);
 }

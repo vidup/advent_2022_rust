@@ -3,20 +3,21 @@ pub fn process() {
     let COMMUNICATION_MARKER_LENGTH = 4;
     let MESSAGES_MARKER_LENGTH = 14;
     
-    let first_marker_index = identifyContent(&file_content, COMMUNICATION_MARKER_LENGTH);
+    let first_marker_index = identify_content(&file_content, COMMUNICATION_MARKER_LENGTH);
 
-    println!("Level 6 - part 1");
+    println!("\nLevel 6");
+    println!("Part 1");
     println!("First marker index: {}", first_marker_index);
     println!("End of first marker index: {}", first_marker_index + 4); // expected response counts from 1, we count from 0 => +4 instead of +3
 
-    let first_message_index = identifyContent(&file_content, MESSAGES_MARKER_LENGTH);
+    let first_message_index = identify_content(&file_content, MESSAGES_MARKER_LENGTH);
 
-    println!("Level 6 - part 2");
+    println!("Part 2");
     println!("First message index: {}", first_message_index);
     println!("End of first message index: {}", first_message_index + 14); // expected response counts from 1, we count from 0 => +14 instead of +13
 }
 
-fn identifyContent(file_content: &str, marker_length: usize) -> i32 {
+fn identify_content(file_content: &str, marker_length: usize) -> i32 {
     let mut first_marker_index = -1;
     let mut index: i32  = 0;
     while first_marker_index == -1 {
