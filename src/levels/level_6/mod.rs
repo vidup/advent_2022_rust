@@ -1,5 +1,5 @@
 pub fn process() {
-    let file_content = read_file();
+    let file_content = advent_2022::file::read(6);
     let COMMUNICATION_MARKER_LENGTH = 4;
     let MESSAGES_MARKER_LENGTH = 14;
     
@@ -35,9 +35,4 @@ fn identify_content(file_content: &str, marker_length: usize) -> i32 {
         }        
     }
     first_marker_index
-}
-
-fn read_file() -> String {
-    let contents = std::fs::read_to_string("./src/levels/level_6/input.txt").expect("Unable to read file");
-    contents
 }

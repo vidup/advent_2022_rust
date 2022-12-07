@@ -59,11 +59,6 @@ fn get_round_score(shape: &Shape, outcome: OutCome) -> u32 {
     get_shape_value(shape) + get_outcome_value(&outcome)
 }
 
-fn read_file() -> String {
-    let contents = std::fs::read_to_string("./src/levels/level_2/input.txt").expect("Unable to read file");
-    contents
-}
-
 fn parse_file_1(file_content: String) -> Vec<Round> {
     let lines: Vec<&str> = file_content.split("\n").collect();
     let mut rounds_raw_data: Vec<Vec<&str>> = lines.iter().map(|line| line.split(" ").collect()).collect();
@@ -142,7 +137,7 @@ fn parse_file_2(file_content: String) -> Vec<Round> {
 }
 
 pub fn part_1() {
-    let file_content = read_file();
+    let file_content = advent_2022::file::read(2);
     let rounds_data = parse_file_1(file_content);
     let rounds_scores: Vec<u32> = rounds_data.iter().map(|round| {
         let outcome = get_outcome_from_round(round).expect("failed_to_get_outcome");
@@ -155,7 +150,7 @@ pub fn part_1() {
 }
 
 pub fn part_2() {
-    let file_content = read_file();
+    let file_content = advent_2022::file::read(2);
     let rounds_data = parse_file_2(file_content);
     let rounds_scores: Vec<u32> = rounds_data.iter().map(|round| {
         let outcome = get_outcome_from_round(round).expect("failed_to_get_outcome");

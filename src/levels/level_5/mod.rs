@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 pub fn process() {
-    let file_content = read_file();
+    let file_content = advent_2022::file::read(5);
     let data = file_content.split(" 1   2   3   4   5   6   7   8   9 ").collect::<Vec<&str>>();
     let mut crates: Vec<&str> = data[0].lines().collect();
     let instructions: Vec<Instruction> = data[1].lines().map(
@@ -57,11 +57,6 @@ struct Instruction {
     from: i32,
     to: i32,
     amount: i32,
-}
-
-fn read_file() -> String {
-    let contents = std::fs::read_to_string("./src/levels/level_5/input.txt").expect("Unable to read file");
-    contents
 }
 
 fn move_crates_one_by_one(

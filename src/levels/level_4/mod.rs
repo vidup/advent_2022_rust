@@ -1,5 +1,5 @@
 pub fn process() {
-    let file_content = read_file();
+    let file_content = advent_2022::file::read(4);
     let assignments: Vec<SectionAssignment> = file_content.lines().collect::<Vec<&str>>()
         .iter()
         .map(|line| {
@@ -27,11 +27,6 @@ struct SectionAssignment {
 
     pair_two_start: usize,
     pair_two_end: usize,
-}
-
-fn read_file() -> String {
-    let contents = std::fs::read_to_string("./src/levels/level_4/input.txt").expect("Unable to read file");
-    contents
 }
 
 fn pair_one_is_inside_pair_2(a: &SectionAssignment) -> bool {

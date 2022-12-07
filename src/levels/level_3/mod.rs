@@ -1,5 +1,5 @@
 pub fn process() {
-    let file_content = read_file();
+    let file_content = advent_2022::file::read(3);
     let rucksacks: Vec<&str> = file_content.lines().collect();
 
     println!("\nLevel 3: ");

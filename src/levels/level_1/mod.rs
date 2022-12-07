@@ -30,7 +30,7 @@ fn order_by_decreasing_calorific_potential(calories_by_elves: &Vec<i32>) -> Vec<
 
 pub fn part_1() {
     println!("\nDay 1, Part 1");
-    let contents = read_input_file();
+    let contents = advent_2022::file::read(1);
     let calories_by_elves = group_data(&contents);
     let max_to_min_calories = order_by_decreasing_calorific_potential(&calories_by_elves);
 
@@ -39,7 +39,7 @@ pub fn part_1() {
 
 pub fn part_2() {
     println!("\nDay 1, Part 2");
-    let contents = read_input_file();
+    let contents = advent_2022::file::read(1);
     let calories_by_elves = group_data(&contents);
     let max_to_min_calories = order_by_decreasing_calorific_potential(&calories_by_elves);
     let sum_of_three_most_calorific_elves = max_to_min_calories[0..3].iter().sum::<i32>();
