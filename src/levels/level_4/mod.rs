@@ -17,6 +17,7 @@ pub fn process() {
         }).collect();
 
     part_1(&assignments);
+    part_2(&assignments);
 }
 
 struct SectionAssignment {
@@ -48,5 +49,25 @@ fn part_1(assignments: &Vec<SectionAssignment>) {
     }
 
     println!("Level 1: ");
+    println!("Overlaps: {}", overlaps);
+}
+
+fn pair_one_starts_in_pair_2(a: &SectionAssignment) -> bool {
+    a.pair_one_start >= a.pair_two_start && a.pair_one_start <= a.pair_two_end
+}
+
+fn pair_2_starts_in_pair_1(a: &SectionAssignment) -> bool {
+    a.pair_two_start >= a.pair_one_start && a.pair_two_start <= a.pair_one_end
+}
+
+fn part_2(assignments: &Vec<SectionAssignment>) {
+    let mut overlaps = 0;
+    for a in assignments {
+        if pair_one_starts_in_pair_2(a) || pair_2_starts_in_pair_1(a) {
+            overlaps += 1;
+        }
+    }
+    
+    println!("Level 2: ");
     println!("Overlaps: {}", overlaps);
 }
