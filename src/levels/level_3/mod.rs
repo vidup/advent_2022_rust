@@ -1,5 +1,3 @@
-use std::fs::read;
-
 pub fn process() {
     let file_content = read_file();
     let rucksacks: Vec<&str> = file_content.lines().collect();
