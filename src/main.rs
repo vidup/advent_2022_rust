@@ -7,4 +7,5 @@ fn main() {
     levels::level_2::part_2();
     levels::level_3::process();
     levels::level_4::process();
+    levels::level_5::process();
 }
