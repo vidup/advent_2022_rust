@@ -7,11 +7,6 @@ pub fn process() {
     part_2(&rucksacks);
 }
 
-fn read_file() -> String {
-    let contents = std::fs::read_to_string("./src/levels/level_3/input.txt").expect("Unable to read file");
-    contents
-}
-
 fn get_item_priority(character: char) -> u32 {
     let value_in_ascii = character as u32;
     let priority = match value_in_ascii {
@@ -36,7 +31,7 @@ pub fn part_1(rucksacks: &Vec<&str>) {
         }
     }
 
-    println!("Part 1");
+    advent_2022::introduce_level(3, 1);
     println!("Priority sum for common item between containers: {}", sum_of_priorities_of_common_items);
 }
 
@@ -51,6 +46,6 @@ pub fn part_2(rucksacks: &Vec<&str>) {
         }
     }
 
-    println!("Part 2");
+    advent_2022::introduce_level(3, 2);
     println!("Priority sum for common item between rucksack groups: {}", sum_of_priorities_of_rucksack_groups_common_items);
 }

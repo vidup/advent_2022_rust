@@ -5,14 +5,13 @@ pub fn process() {
     
     let first_marker_index = identify_content(&file_content, COMMUNICATION_MARKER_LENGTH);
 
-    println!("\nLevel 6");
-    println!("Part 1");
+    advent_2022::introduce_level(6, 1);
     println!("First marker index: {}", first_marker_index);
     println!("End of first marker index: {}", first_marker_index + 4); // expected response counts from 1, we count from 0 => +4 instead of +3
 
     let first_message_index = identify_content(&file_content, MESSAGES_MARKER_LENGTH);
 
-    println!("Part 2");
+    advent_2022::introduce_level(6, 2);
     println!("First message index: {}", first_message_index);
     println!("End of first message index: {}", first_message_index + 14); // expected response counts from 1, we count from 0 => +14 instead of +13
 }

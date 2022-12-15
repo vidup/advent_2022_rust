@@ -5,3 +5,8 @@ pub mod file {
         content
     }
 }
+
+pub fn introduce_level(level: i32, part: i32) {
+    println!("\nLevel {}", level);
+    println!("Part {}", part);
+}

@@ -145,7 +145,7 @@ pub fn part_1() {
         score
     }).collect();
 
-    println!("Level 2, Part 1");
+    advent_2022::introduce_level(2, 1);
     println!("Total score: {}", rounds_scores.iter().sum::<u32>());
 }
 
@@ -158,6 +158,6 @@ pub fn part_2() {
         score
     }).collect();
 
-    println!("Level 2, Part 2");
+    advent_2022::introduce_level(2, 2);
     println!("Total score: {}", rounds_scores.iter().sum::<u32>());
 }

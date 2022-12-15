@@ -48,7 +48,6 @@ pub fn process() {
         }
     }
 
-    println!("\nLevel 5: ");
     part_1(&mut crates_map.clone(), &instructions); // It will be modified by the script, so I need to clone it to avoid polluting the second part
     part_2(&mut crates_map, &instructions);
 }
@@ -95,7 +94,7 @@ fn part_1(
 
     let result = get_top_shelf(crates);
 
-    println!("Part 1");
+    advent_2022::introduce_level(5, 1);
     println!("Result: {}", result);
 
 }
@@ -127,6 +126,6 @@ fn part_2(
 
     let result = get_top_shelf(crates);
 
-    println!("Part 2");
+    advent_2022::introduce_level(5, 2);
     println!("Result: {}", result);
 }

@@ -29,7 +29,7 @@ fn order_by_decreasing_calorific_potential(calories_by_elves: &Vec<i32>) -> Vec<
 }
 
 pub fn part_1() {
-    println!("\nDay 1, Part 1");
+    advent_2022::introduce_level(1, 1);
     let contents = advent_2022::file::read(1);
     let calories_by_elves = group_data(&contents);
     let max_to_min_calories = order_by_decreasing_calorific_potential(&calories_by_elves);
@@ -38,7 +38,7 @@ pub fn part_1() {
 }
 
 pub fn part_2() {
-    println!("\nDay 1, Part 2");
+    advent_2022::introduce_level(1, 2);
     let contents = advent_2022::file::read(1);
     let calories_by_elves = group_data(&contents);
     let max_to_min_calories = order_by_decreasing_calorific_potential(&calories_by_elves);

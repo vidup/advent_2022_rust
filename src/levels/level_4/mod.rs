@@ -16,7 +16,6 @@ pub fn process() {
             }
         }).collect();
 
-    println!("\nLevel 4: ");
     part_1(&assignments);
     part_2(&assignments);
 }
@@ -44,7 +43,7 @@ fn part_1(assignments: &Vec<SectionAssignment>) {
         }
     }
 
-    println!("Part 1");
+    advent_2022::introduce_level(4, 1);
     println!("Overlaps: {}", overlaps);
 }
 
@@ -64,6 +63,6 @@ fn part_2(assignments: &Vec<SectionAssignment>) {
         }
     }
     
-    println!("Part 2");
+    advent_2022::introduce_level(4, 2);
     println!("Overlaps: {}", overlaps);
 }
